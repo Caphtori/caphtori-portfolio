@@ -10,19 +10,21 @@
 
 <body>
     <header>
-        <h1>Caphtori</h1>
+        <div>
+            <h1>Caphtori</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
+                <li><div><a href="#about-me">About Me</a></div></li>
+                <li><div><a href="#work">Work</a></div></li>
+                <li><div><a href="#contact-me">Contact Me</a></div></li>
                 <!-- <li><a href="#resume">Resume</a></li> -->
             </ul>
         </nav>
     </header>
     <!-- Subheader -->
     <section class="subheader">
-        <h2>Placeholder subtitle</h2>
+        <div><h2>Placeholder subtitle</h2></div>
     </section>
     <!-- Content -->
     <main>
@@ -31,14 +33,17 @@
             <div class="label">
                 <h3>About Me</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quis eum repudiandae cum fuga aliquam, maxime corrupti vel laboriosam officia ut pariatur eos impedit rem totam commodi repellendus unde, amet sapiente. Unde saepe suscipit repudiandae? Ratione, quod! In omnis quos quasi quia velit assumenda eum excepturi maiores, molestiae quae incidunt, nam accusamus impedit cumque distinctio necessitatibus! Dignissimos maiores dicta porro eius earum. Eius, sint iste. Eum nam id quaerat obcaecati tempora corporis deserunt aspernatur maiores tenetur, libero et, at natus.</p>
+            <div class="wrapper">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quis eum repudiandae cum fuga aliquam, maxime corrupti vel laboriosam officia ut pariatur eos impedit rem totam commodi repellendus unde, amet sapiente. Unde saepe suscipit repudiandae? Ratione, quod! In omnis quos quasi quia velit assumenda eum excepturi maiores, molestiae quae incidunt, nam accusamus impedit cumque distinctio necessitatibus! Dignissimos maiores dicta porro eius earum. Eius, sint iste. Eum nam id quaerat obcaecati tempora corporis deserunt aspernatur maiores tenetur, libero et, at natus.</p>
+            </div>
+            
         </div>
         <!-- Work -->
         <div class="row" id="work">
             <div class="label">
                 <h3>Work</h3>
             </div>
-            <div class="wrapper">
+            <div class="wrapper card-wrapper">
                 <!-- Big Card -->
                 <div class="card hero">
                     <div class="card-label">
@@ -51,61 +56,65 @@
                     </div>
                 </div>
                 <!-- 2x2 Grid -->
-                <div class="card hero">
-                    <div class="card-label">
-                        <h4>Placeholder2</h4>
-                        <p>Code Description</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-label">
+                            <h4>Placeholder2</h4>
+                            <p>Code Description</p>
+                        </div>
+                        <!-- Change to img Element -->
+                        <div class="card-img">
+    
+                        </div>
                     </div>
-                    <!-- Change to img Element -->
-                    <div class="card-img">
-
+                    <div class="card">
+                        <div class="card-label">
+                            <h4>Placeholder3</h4>
+                            <p>Code Description</p>
+                        </div>
+                        <!-- Change to img Element -->
+                        <div class="card-img">
+    
+                        </div>
                     </div>
-                </div>
-                <div class="card hero">
-                    <div class="card-label">
-                        <h4>Placeholder3</h4>
-                        <p>Code Description</p>
+                    <div class="card">
+                        <div class="card-label">
+                            <h4>Placeholder4</h4>
+                            <p>Code Description</p>
+                        </div>
+                        <!-- Change to img Element -->
+                        <div class="card-img">
+    
+                        </div>
                     </div>
-                    <!-- Change to img Element -->
-                    <div class="card-img">
-
+                    <div class="card">
+                        <div class="card-label">
+                            <h4>Placeholder5</h4>
+                            <p>Code Description</p>
+                        </div>
+                        <!-- Change to img Element -->
+                        <div class="card-img">
+    
+                        </div>
                     </div>
-                </div>
-                <div class="card hero">
-                    <div class="card-label">
-                        <h4>Placeholder4</h4>
-                        <p>Code Description</p>
-                    </div>
-                    <!-- Change to img Element -->
-                    <div class="card-img">
-
-                    </div>
+                
                 </div>
             </div>
-            <div class="card hero">
-                <div class="card-label">
-                    <h4>Placeholder5</h4>
-                    <p>Code Description</p>
-                </div>
-                <!-- Change to img Element -->
-                <div class="card-img">
-
-                </div>
-            </div>
-            
         </div>
         <!-- Contact Me -->
         <div class="row" id="contact-me">
             <div class="label">
                 <h3>Contact Me</h3>
             </div>
-            <nav>
-                <ul>
-                    <li>(555)-555-5555</li>
-                    <li><a href="mailto:benjy.shuter@gmail.com">benjy.shuter@gmail.com</a></li>
-                    <li><a href="https://github.com/Caphtori">GitHub</a></li>
-                </ul>
-            </nav>
+            <div class="wrapper wrapper-nav">
+                <nav>
+                    <ul>
+                        <li><div><p>(555)-555-5555</p></div></li>
+                        <li><div><a href="mailto:benjy.shuter@gmail.com">benjy.shuter@gmail.com</a></div></li>
+                        <li><div><a href="https://github.com/Caphtori">GitHub</a></div></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </main>
 </body>
