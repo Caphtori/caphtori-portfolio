@@ -1,121 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Caphtori Portfolio</title>
+    <title>Caphtori Portfolio Test2</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-
 <body>
     <header>
-        <div>
-            <h1>Caphtori</h1>
-        </div>
+        <h1>Caphtori</h1>
         <nav>
             <ul>
-                <li><div><a href="#about-me">About Me</a></div></li>
-                <li><div><a href="#work">Work</a></div></li>
-                <li><div><a href="#contact-me">Contact Me</a></div></li>
-                <!-- <li><a href="#resume">Resume</a></li> -->
+                <div><li><a href="#about-me">About Me</a></li></div>
+                <div><li><a href="#work">Work</a></li></div>
+                <div><li><a href="#contact-me">Contact Me</a></li></div>
             </ul>
         </nav>
     </header>
-    <!-- Subheader -->
-    <section class="subheader">
-        <div><h2>Placeholder subtitle</h2></div>
-    </section>
-    <!-- Content -->
     <main>
-        <!-- About Me -->
-        <div class="row" id="about-me">
-            <div class="label">
-                <h3>About Me</h3>
+        <section class="card" id="about-me">
+            <div class="img-card">
+                <img src="./assets/images/Caphtori Avi.png" alt="Caphtori Avatar">
             </div>
-            <div class="wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quis eum repudiandae cum fuga aliquam, maxime corrupti vel laboriosam officia ut pariatur eos impedit rem totam commodi repellendus unde, amet sapiente. Unde saepe suscipit repudiandae? Ratione, quod! In omnis quos quasi quia velit assumenda eum excepturi maiores, molestiae quae incidunt, nam accusamus impedit cumque distinctio necessitatibus! Dignissimos maiores dicta porro eius earum. Eius, sint iste. Eum nam id quaerat obcaecati tempora corporis deserunt aspernatur maiores tenetur, libero et, at natus.</p>
+            <div class="about-me-card">
+                <div class="label"><h2>About Me</h2></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, voluptatibus quaerat. Sit quo consequatur sint laborum iusto reprehenderit, fugit atque vero at non unde voluptatibus deleniti, totam quae consectetur accusantium labore maxime fugiat architecto, doloremque cupiditate necessitatibus. Odio, delectus. Quam necessitatibus, tenetur dolorum neque velit quibusdam cumque vero laudantium numquam quis magnam expedita at explicabo odit voluptatibus. Error ex eligendi quasi voluptatibus fugiat ad reprehenderit doloremque, delectus, dolorem illo explicabo? Iure veritatis enim consequatur nobis inventore fuga nihil unde placeat.</p>
             </div>
             
-        </div>
-        <!-- Work -->
-        <div class="row" id="work">
-            <div class="label">
-                <h3>Work</h3>
-            </div>
-            <div class="wrapper card-wrapper">
-                <!-- Big Card -->
-                <div class="card hero">
-                    <div class="card-label">
-                        <h4>Placeholder1</h4>
-                        <p>Code Description</p>
+        </section>
+        <section class="card" id="work">
+            <div class="label"><h2>Work</h2></div>
+            <div class="work-wrapper">
+                <div class="hero"></div>
+                <div class="secondaries">
+                    <div>
+
                     </div>
-                    <!-- Change to img Element -->
-                    <div class="card-img">
+                    <div>
 
                     </div>
                 </div>
-                <!-- 2x2 Grid -->
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-label">
-                            <h4>Placeholder2</h4>
-                            <p>Code Description</p>
-                        </div>
-                        <!-- Change to img Element -->
-                        <div class="card-img">
-    
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-label">
-                            <h4>Placeholder3</h4>
-                            <p>Code Description</p>
-                        </div>
-                        <!-- Change to img Element -->
-                        <div class="card-img">
-    
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-label">
-                            <h4>Placeholder4</h4>
-                            <p>Code Description</p>
-                        </div>
-                        <!-- Change to img Element -->
-                        <div class="card-img">
-    
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-label">
-                            <h4>Placeholder5</h4>
-                            <p>Code Description</p>
-                        </div>
-                        <!-- Change to img Element -->
-                        <div class="card-img">
-    
-                        </div>
-                    </div>
-                
-                </div>
             </div>
-        </div>
-        <!-- Contact Me -->
-        <div class="row" id="contact-me">
-            <div class="label">
-                <h3>Contact Me</h3>
-            </div>
-            <div class="wrapper wrapper-nav">
-                <nav>
-                    <ul>
-                        <li><div><p>(555)-555-5555</p></div></li>
-                        <li><div><a href="mailto:benjy.shuter@gmail.com">benjy.shuter@gmail.com</a></div></li>
-                        <li><div><a href="https://github.com/Caphtori">GitHub</a></div></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        </section>
+        <section class="card" id="contact-me">
+            <div class="label"><h2>Contact Me</h2></div>
+            <nav>
+                <ul>
+                    <li><div><a href="tel: 555-555-5555">(555)555-5555</a></div></li>
+                    <li><div><a href="mailto:benjy.shuter@gmail.com">benjy.shuter@gmail.com</a></div></li>
+                    <li><div><a href="https://github.com/caphtori">Github</a></div></li>
+                </ul>
+            </nav>
+        </section>
     </main>
 </body>
 
