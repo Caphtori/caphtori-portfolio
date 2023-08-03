@@ -1,9 +1,9 @@
 :root {
     --color1: white;
     --color2: maroon;
-    --c2hov: #620000;
     --bodytxt: black;
     --linkhov: gold;
+    --shadow: rgba(0, 0, 0, 0.25)
 }
 
 * {
@@ -28,7 +28,8 @@ a {
 }
 
 
-/* Header Styles */
+/* Header*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -38,11 +39,19 @@ header {
     color: var(--color1);
     padding: 1rem;
     border-bottom: 2px solid var(--bodytxt);
-    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 2px 2px var(--shadow);
     position: relative;
     z-index: 2;
 }
 
+h1 {
+    font-size: 3rem;
+    text-shadow: 0.5rem 0.5rem var(--shadow);
+}
+
+
+
+/* -nav Style */
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -54,14 +63,14 @@ ul div {
     background-color: var(--color1);
     color: var(--bodytxt);
     padding: 0.125rem 0.25rem;
-    box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 5px 2px 2px var(--shadow);
 
 }
 
 ul div:hover {
     color: var(--linkhov);
     border: 2px solid var(--bodytxt);
-    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 1px 2px var(--shadow);
     position: relative;
     left: 0.25rem;
 }
@@ -70,52 +79,45 @@ ul div:active {
     background-color: var(--linkhov);
     color: var(--linkhov);
     border: 2px solid var(--bodytxt);
-    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 1px 2px var(--shadow);
     position: relative;
     left: 0.25rem;
 }
 
-h1 {
-    font-size: 3rem;
-    text-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
-}
+
 
 
 /* Content Style */
-
 
 section {
     background-color: var(--color1);
     border-bottom: 2px dashed var(--bodytxt);
     min-height: 150px;
-    box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 5px 2px 2px var(--shadow);
 }
 
+/* -section Labels */
 .label {
     background-color: var(--color1);
     display: inline-flex;
     border-bottom: 2px dashed var(--bodytxt);
     border-right: 2px dashed var(--bodytxt);
-    box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 5px 2px 2px var(--shadow);
     position: relative;
     z-index: 3;
 }
 
-.label h2 {
+h2 {
+    font-size: 2rem;
     padding: 0.125rem 0.25rem;
 }
 
-h2 {
-    font-size: 2rem;
-}
 
-.card p {
-    padding: 1rem;
-}
 
 
 
 /* About me */
+
 #about-me {
     display: flex;
     flex-direction: row;
@@ -123,14 +125,22 @@ h2 {
     z-index: 1;
 }
 
+/* -avatar */
 .img-card {
     padding: 1rem;
     border-right: 2px dashed var(--bodytxt);
-    box-shadow: 10px 5px 2px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px 5px 2px -2px var(--shadow);
 }
+
+
 .img-card img {
     border: 2px solid var(--bodytxt);
 }
+
+p {
+    padding: 1rem;
+}
+
 
 
 
@@ -141,15 +151,24 @@ h2 {
     position: relative;
 }
 
+/* -specific to this section's .label */
 #work .label {
     position: absolute;
 }
 
+/* -imagebutton structures */
 .work-wrapper {
     display: flex;
     flex: row;
     width: 100%;
     height: 400px;
+}
+
+.secondaries {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
 }
 
 button {
@@ -167,6 +186,43 @@ button {
 
 
 
+/* --images as backgrounds */
+.work-img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--bodytxt);
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.hero .work-img {
+    background-image: url("../images/Horiseon Refactor.png");
+}
+
+.img2 {
+    background-image: url("../images/Pre-Work Guide.png");
+}
+
+.img3 {
+    background-image: url("../images/george-steinbrenner.jpg");
+    background-size: cover;
+}
+
+/* --tint for hovering */
+.hover-tint {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 215, 0, 0.5); 
+}
+
+
+/* --button activity */
 button:hover, button:focus{
     cursor: pointer;
     .hover-tint{
@@ -184,18 +240,7 @@ button:active {
     
 }
 
-.work-img {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    border: 2px solid var(--bodytxt);
-    position: relative;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
+/* -imagebutton labels */
 
 .work-label {
     display: inline-flex;
@@ -207,6 +252,7 @@ button:active {
     border-left: 2px dashed var(--bodytxt);
     padding: 0.5rem;
     padding-left: 1rem;
+    text-align: end;
 }
 
 h3 {
@@ -216,36 +262,6 @@ h3 {
 .work-label p {
     padding: 0;
     padding-top: 0.25rem;
-}
-
-.hover-tint {
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 215, 0, 0.5); 
-}
-
-
-
-.hero .work-img {
-    background-image: url("../images/Horiseon Refactor.png");
-}
-
-.img2 {
-    background-image: url("../images/Pre-Work Guide.png");
-}
-
-.img3 {
-    background-image: url("../images/george-steinbrenner.jpg");
-    background-size: cover;
-}
-
-
-.secondaries {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
 }
 
 
@@ -259,19 +275,104 @@ h3 {
     box-shadow: none;
 }
 
+/* -contact nav */
 #contact-me ul {
     margin-top: 2rem;
     justify-content: space-evenly;
 }
 
-
 #contact-me a {
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 350px) {
-    #contact-me a {
-        font-size: 1.25rem;
+
+/* Tablet/Mobile restructuring */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    /* About Me */
+    #about-me {
+        flex-direction: column;
+    }
+
+    /* -avatar */
+    .img-card {
+        display: flex;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 2px dashed var(--bodytxt);
+        padding: 0;
+        box-shadow: 3px 5px 2px 2px var(--shadow);
+    }
+
+    /* -new box around avatar */
+    .img-subcard {
+        display: flex;
+        padding: 1rem;
+        border-left: 2px dashed var(--bodytxt);
+        border-right: 2px dashed var(--bodytxt);
+        box-shadow: 10px 5px 2px -2px var(--shadow);
+    }
+
+    /* Work */
+    .work-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondaries {
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+    }
+
+    button {
+        height: 50%;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px dashed var(--bodytxt);
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+
+    /* Contact Me */
+    #contact-me ul {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
     }
     
+}
+
+
+/* Adjustments so the structure doesn't break down for slimmer mobiles.
+
+It works down to 320px.  Lower than that, and it breaks.*/
+@media screen and (max-width: 350px) {
+    
+    /* Removing padding from around the avatar */
+    .img-subcard {
+        padding: 1rem 0 1rem 0;
+        border: none;
+        box-shadow: none;
+    }
+    
+    /* Shrinking the contact me link fonts */
+    #contact-me li {
+        font-size: 1rem;
+    }
+
 }
