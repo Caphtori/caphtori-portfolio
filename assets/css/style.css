@@ -10,9 +10,10 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: var(--color1);
+    background-color: var(--color2);
     color: var(--bodytxt);
 }
 
@@ -32,11 +33,14 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
     background: var(--color2);
     color: var(--color1);
     padding: 1rem;
     border-bottom: 2px solid var(--bodytxt);
     box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
 }
 
 ul {
@@ -49,7 +53,7 @@ ul div {
     border: 2px dashed var(--bodytxt);
     background-color: var(--color1);
     color: var(--bodytxt);
-    padding: .125rem .25rem;
+    padding: 0.125rem 0.25rem;
     box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
 
 }
@@ -59,7 +63,7 @@ ul div:hover {
     border: 2px solid var(--bodytxt);
     box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.25);
     position: relative;
-    left: .25rem;
+    left: 0.25rem;
 }
 
 ul div:active {
@@ -68,20 +72,22 @@ ul div:active {
     border: 2px solid var(--bodytxt);
     box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.25);
     position: relative;
-    left: .25rem;
+    left: 0.25rem;
 }
 
 h1 {
     font-size: 3rem;
-    text-shadow: .5rem .5rem rgba(0, 0, 0, 0.25);
+    text-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 
 /* Content Style */
 
+
 section {
+    background-color: var(--color1);
     border-bottom: 2px dashed var(--bodytxt);
-    min-height: 100px;
+    min-height: 150px;
     box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -91,10 +97,12 @@ section {
     border-bottom: 2px dashed var(--bodytxt);
     border-right: 2px dashed var(--bodytxt);
     box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 3;
 }
 
 .label h2 {
-    padding: .125rem .25rem;
+    padding: 0.125rem 0.25rem;
 }
 
 h2 {
@@ -105,14 +113,17 @@ h2 {
     padding: 1rem;
 }
 
+
+
 /* About me */
 #about-me {
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
 }
 
 .img-card {
-    background-color: var(--color1);
     padding: 1rem;
     border-right: 2px dashed var(--bodytxt);
     box-shadow: 10px 5px 2px -2px rgba(0, 0, 0, 0.25);
@@ -122,19 +133,137 @@ h2 {
 }
 
 
+
+/* Work */
+
+#work {
+    height: 50%;
+    position: relative;
+}
+
+#work .label {
+    position: absolute;
+}
+
+.work-wrapper {
+    display: flex;
+    flex: row;
+    width: 100%;
+    height: 400px;
+}
+
+button {
+    background-color: var(--color1);
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    border-right: 2px dashed var(--bodytxt);
+    position: relative;
+}
+
+.button3 {
+    border: none;
+}
+
+
+
+button:hover, button:focus{
+    cursor: pointer;
+    .hover-tint{
+        visibility: visible;
+    }
+    
+}
+
+button:active {
+    cursor: pointer;
+    .hover-tint{
+        visibility: visible;
+        background-color: rgba(255, 215, 0, 0.75);
+    }
+    
+}
+
+.work-img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--bodytxt);
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.work-label {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: var(--color1);
+    align-items: end;
+    position: absolute;
+    border-top: 2px dashed var(--bodytxt);
+    border-left: 2px dashed var(--bodytxt);
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.work-label p {
+    padding: 0;
+    padding-top: 0.25rem;
+}
+
+.hover-tint {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 215, 0, 0.5); 
+}
+
+
+
+.hero .work-img {
+    background-image: url("../images/Horiseon Refactor.png");
+}
+
+.img2 {
+    background-image: url("../images/Pre-Work Guide.png");
+}
+
+.img3 {
+    background-image: url("../images/george-steinbrenner.jpg");
+    background-size: cover;
+}
+
+
+.secondaries {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+
 /* Contact Me */
 
 #contact-me {
     background-color: var(--color2);
     border: none;
     box-shadow: none;
-    height: 100vh;
 }
 
 #contact-me ul {
     margin-top: 2rem;
     justify-content: space-evenly;
 }
+
 
 #contact-me a {
     flex-wrap: wrap;
